@@ -6,6 +6,7 @@ import mongoose from 'mongoose'
 
 //routes
 import userRouter from './routes/userRoutes.js'
+import postRouter from './routes/postRoutes.js'
 
 
 const app = express()
@@ -25,6 +26,7 @@ app.get('/', (req, res) =>{
 })
 
 app.use('/users', userRouter)  //http://localhost:5000/users/signup
+app.use ('/post', postRouter)
 
 const PORT = process.env.PORT || 8000
 
